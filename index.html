@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CA Department</title>
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    div.bg {
+        position: relative;
+        height: auto;
+        width: 100%;
+        background: url(14.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+    /* navigation start */
+    .nav {
+        list-style-type: none;
+        padding: 1px;
+        overflow: hidden;
+        background-color: rgba(255, 255, 255, 0.239);
+        margin-top: 0px;
+    }
+    nav li {
+        float: left;
+        padding-left: 20px;
+    }
+    nav li a {
+        display: block;
+        color: rgb(251, 251, 251);
+        text-align: center;
+        padding: 20px 60px;
+        text-decoration: none;
+        position: relative;
+    }
+    nav img {
+        float: left;
+        list-style-image: none;
+        padding-right: 50px;
+        border-radius: 0px;
+        margin: 0px;
+    }
+    nav li a:hover {
+        background-color: rgb(254, 254, 254);
+        border-radius: 10px;
+        color: rgb(6, 235, 223);
+        box-shadow: 1px 1px 5px 3px;
+    }
+    /* navigation end */
+
+    /* about department */
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0px;
+        width: 100%;
+        height: 0%;
+    }
+    .container .about {
+        color: aliceblue;
+        width: 650px;
+        padding: 10px;
+        margin: 0px;
+    }
+    .about h1 {
+        padding: 15px;
+    }
+    .container img {
+        box-shadow: 7px 7px 10px rgba(9, 9, 9, 0.99);
+    }
+    /* about department end */
+
+    /* about bca */
+    .bca {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 100px 0px;
+    }
+    .bca .about {
+        color: aliceblue;
+        width: 650px;
+        padding: 10px;
+        margin: 10px 0px;
+    }
+    .bca img {
+        box-shadow: -5px 7px 10px rgba(9, 9, 9, 0.99);
+    }
+    /* about bca end */
+
+    /* about mca */
+    .mca {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+    }
+    .mca .aboutmca {
+        color: aliceblue;
+        width: 650px;
+        padding: 20px;
+        margin: 20px 0px;
+    }
+    .mca img {
+        box-shadow: 7px 7px 10px rgba(9, 9, 9, 0.99);
+    }
+    .aboutmca h1 {
+        padding: 15px;
+    }
+    /* about mca end */
+
+
+    /* Time table button start */
+    .button {
+        border-radius: 20px;
+        background-color: rgba(6, 201, 255, 0.767);
+        border: none;
+        color: #fb0000fe;
+        text-align: center;
+        font-size: 28px;
+        padding: 20px;
+        width: 500px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: auto;
+        display: block;
+        box-shadow: 1px 1px 15px 1px;
+        outline: none;
+    }
+    .button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+    }
+    .button span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+    }
+    .button:hover span {
+        padding-right: 35px;
+    }
+    .button:hover span:after {
+        opacity:50;
+        right: 0;
+    }
+    /* Time table button end */
+
+    /* <!-- Top to page button --> */
+    #topBtn {
+        display: block;
+        position: relative;
+        font-size: 18px;
+        outline: none;
+        border: none;
+        background-color: red;
+        color: white;
+        cursor: pointer;
+        padding: 10px 15px 10px 15px;
+        border-radius: 10px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: 650px;
+    }
+    /* <!-- Top to page button --> */
+
+    /* footer start */
+    footer div {
+        background-color: rgb(183, 249, 16);
+        color: rgb(0, 0, 0);
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        font-size: 15px;
+    }
+    /* footer ends */
+
+    .video {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* <!-- Vision & Mission start --> */
+    #VM {
+        height: 100vh;
+        padding-top: 50px;
+    }
+    .vision {
+        text-align: center;
+        color: aliceblue;
+        background-color: rgba(0, 0, 0, 0.34);
+        position: static;
+        padding: 25px;
+        padding-left: 200px;
+        padding-right: 200px;
+    }
+    .mission {
+        text-align: center;
+        color: aliceblue;
+        background-color: rgba(0, 0, 0, 0.34);
+        position: static;
+        padding: 25px;
+        margin-top: 50px;
+    }
+    .mission li {
+        list-style-type: none;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    /* <!-- Vision & Mission start --> */
+</style>
+
+<body>
+    <div class="bg">
+        <header>
+            <h1 style="color:rgb(32, 63, 94); text-align: center;
+            background-color: rgb(183, 249, 16); border:5px; border-radius:0px; font-size: 60px; font-family:Lucida Sans; margin-top:0px; text-shadow: 3px 2px 5px #000000df; padding-bottom:5px;">Department of Computer Application</h1>
+
+            <!-- Nevigation bar -->
+            <div>
+                <nav>
+                    <ul class="nav">
+                        <a href="https://iul.ac.in/" target="_blank"><img src="IntegralUniversityLogo.jpg"
+                                alt="Integral University"></a>
+                        <li id="home"><a href="index.html" target="_self">Home</a></li>
+                        <li><a href="" target="_blank">About</a></li>
+                        <li><a href="" target="_blank">Contect Us</a></li>
+                        <li><a href="https://iul.ac.in/" target="_blank">IUL</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- Nevigation bar end -->
+        </header>
+        <br>
+        
+        <!-- Vision & Mission start -->
+        <section id="VM">
+            <div class="vision">
+                <h2 style="text-align:center;color:wheat;">Vision</h2>
+                <p style="color: aliceblue; font-family:Verdana, Geneva, Tahoma, sans-serif; text-align:center;">
+                    Department of Computer Science & Engineering to be a leading world class technology department
+                    playing its
+                    role as a key node in national and global knowledge network, thus empowering the computer science
+                    industry
+                    with the wings of knowledge and power of innovation. Lorem ipsum dolor sit, amet consectetur
+                    adipisicing elit. Eius nulla ex quos tempora quia voluptatibus hic? Repellendus reprehenderit quis
+                    obcaecati. To lead the teeming millions of the world through the wilderness of ignorance and
+                    illiteracy, as "Kindly Light" (Exodus 13:21) with the resounding divine proclamation. "Read: Thy
+                    Lord is the most bounteous (Quran 30:96:3)." and to educate them in the most constructive and
+                    innovative ways. To integrate the ebullience, intellect and dynamism of youth with decency, decorum,
+                    discipline and dedication through value-based quality education.
+                </p>
+            </div>
+
+            <br>
+
+            <div class="mission">
+                <h2 style="text-align:center;color:wheat;">Mission</h2>
+                <p style="color:aliceblue; font-family:Verdana, Geneva, Tahoma, sans-serif; text-align:center;">
+                    <b>The Mission of the department is as follows:</b>
+
+                    <ul>
+                        <li>
+                            To nurture talent of students for research, innovation and excellence in the field of computer
+                            engineering starting from Under graduate level.
+                        </li>
+                        <li>
+                            To develop highly analytical and qualified computer engineers by imparting training on cutting
+                            edge
+                            technology.
+                        </li>
+                        <li>
+                            To produce socially sensitive computer engineers with professional ethics.
+                        </li>
+                        <li>
+                            To focus on R&D environment in close partnership with industry and foreign universities.
+                        </li>
+                        <li>
+                            To produce well-rounded, up to date, scientifically tempered, design oriented engineer and
+                            scientists
+                            capable of lifelong learning.
+                        </li>
+                    </ul>
+                </p>
+            </div>
+        </section>
+        <!-- Vision & Mission ends -->
+        <br>
+        
+        
+        <!-- about department -->
+        <section class="container">
+
+            <img style="float:center; margin:0px; padding:0px; border-radius:20px;" src="BCA.jpg" width="550px"
+                height="300px">
+
+
+            <div class="about">
+                <h1 style="text-align:center;color:wheat;text-decoration-line:overline;">About Department</h1>
+                <p style="font-family:Verdana, Geneva, Tahoma, sans-serif; text-align:right;">The Department was
+                    established in <b>2003</b> and is one of the most reputed academic departments in the field of
+                    Computer Application. The curriculum of this department is addressed to the students who wish to be
+                    distinguished as <b> Software Developer, Computer System Analyst, Software Engineer, SoftwareApplication Architect, Hardware Engineer, Software Consultant, Database Administrator</b> in theprivate and public sector. You can become part of this highly competitive and futuristic environment by enrolling for one of our exciting programs. The Department offers a 4 semester Bachelor program in Computer Application (BCA), 4 semester Master program in Computer Application,The combination of a dynamic and innovative curriculum that takes advantage of the latest technologies, with the
+                    experienced faculties of the Department, creates a fertile ground for the effective dissemination of
+                    knowledge and the development of the necessary skills for future professional recognition of the
+                    Department's students.
+                </p>
+            </div>
+        </section>
+        <br>
+        <!-- about department end -->
+
+        <!-- Wi-Fi & LAN start -->
+        <section class="video">
+            <div
+                style="margin-left:0px; margin-top: 0px; text-align:center; padding-right:10px; color:aliceblue; width: 100%; height:100%;">
+                <div style="margin-top:0px; width: 400px;float:left;text-align:justify;">
+                    <h2 style="text-align:center; color: wheat; padding-bottom:15px;"><a style="color: wheat;"
+                            href="https://en.wikipedia.org/wiki/Wi-Fi">Wi-Fi</a></h2>
+                    <p>A Wireless Fidelity (Wi-Fi) technology may be used to provide local network and Internet access
+                        to devices that are within Wi-Fi range of one or more routers that are connected to the
+                        Internet. The coverage of one or more interconnected access points (hotspots) can extend from an
+                        area as small as a few rooms to as large as many square kilometres (miles). Coverage in the
+                        larger area may require a group of access points with overlapping coverage. For example, public
+                        outdoor Wi-Fi technology has been used successfully in wireless mesh networks in London. An
+                        international example is Fon. Wi-Fi uses multiple parts of the IEEE 802 protocol family and is
+                        designed to interwork seamlessly with its wired sibling, Ethernet. Compatible devices can
+                        network through wireless access points to each other as well as to wired devices and the
+                        Internet. The different versions of Wi-Fi are specified by various IEEE 802.11 protocol
+                        standards, with the different radio technologies determining radio bands, and the maximum
+                        ranges, and speeds that may be achieved.
+                    </p>
+                </div>
+
+                <video width="600px" height="350px" style=" object-fit: fill; border-radius:50px; margin-top: 40px;"
+                    autoplay muted controls src="video1.mp4">sample</video>
+
+                <div style="margin-top:0px; width:400px;float:right; text-align:justify;">
+                    <h2 style="text-align:center; color:wheat; padding-bottom: 15px;"><a style="color: wheat;"
+                            href="https://en.wikipedia.org/wiki/Wi-Fi">LAN</a></h2>
+                    <p>A local area network (LAN) is a computer network that interconnects computers within a limited
+                        area such as a residence, school, laboratory, university campus or office building.[1] By
+                        contrast, a wide area network (WAN) not only covers a larger geographic distance, but also
+                        generally involves leased telecommunication circuits.Ethernet and Wi-Fi are the two most common
+                        technologies in use for local area networks. Historical network technologies include ARCNET,
+                        Token Ring and AppleTalk. he advantages of a LAN are the same as those for any group of devices
+                        networked together. The devices can use a single Internet connection, share files with one
+                        another, print to shared printers, and be accessed and even controlled by one another.LANs were
+                        developed in the 1960s for use by colleges, universities, and research facilities (such as
+                        NASA), primarily to connect computers to other computers. It wasn't until the development of
+                        Ethernet technology (1973, at Xerox PARC), its commercialization (1980), and its standardization
+                        (1983) that LANs started to be used widely.
+                    </p>
+                </div>
+            </div>
+
+        </section>
+        <!-- Wi-Fi & LAN start -->
+        <br>
+
+        <!-- Time Table Button -->
+        <button class="button" onclick="window.location.href='Time Table.html';"><span>Click Here for Time Table</span></button>
+        <!-- Time Table Button -->
+        <br>
+
+        <!-- about BCA department starts -->
+        <section class="bca">
+            <div class="about">
+                <h1 style="text-align:center;color:wheat; text-decoration-line:overline;">Bachelor of Computer
+                    Application</h1>
+                <p style="font-family:Verdana, Geneva, Tahoma, sans-serif; text-align:left; padding:10px 0px;">Bachelor
+                    in Computer Application (BCA) is one of the popular courses among the students who want to make
+                    their career in the IT (Information Technology) field. The duration of the course is 3 years and
+                    divided into 6 semesters. It comprises of the subjects like database, networking, data structure,
+                    core programming languages like ‘C’ and ‘java’. This course provides a lot of opportunities to the
+                    students who are interested in computer field and wants to work in the IT sector as programmer or
+                    software developer. Bachelor in Computer Application (BCA) is an undergraduate degree course in
+                    computer applications. With the rapid growth of IT industry in India, the demand of computer
+                    professional is increasing day by day. This increasing growth of IT industry has created a lot of
+                    opportunities for the computer graduates.
+                </p>
+            </div>
+
+            <img style="float:center; margin:0px; padding:0px; border-radius:20px;" src="6.jpeg" width="550px"
+                height="300px">
+        </section>
+        <!-- about BCA department ends -->
+        <br>
+
+        <!-- about MCA department starts -->
+        <section class="mca">
+
+            <img style="float:center; margin:0px; padding:0px; border-radius:20px;" src="MCA.jpg" width="550px"
+                height="300px">
+
+            <div class="aboutmca">
+                <h1 style="text-align:center;color:wheat;text-decoration-line:overline;">Master of Computer Application
+                </h1>
+                <p style="font-family:Verdana, Geneva, Tahoma, sans-serif; text-align:right; padding:0px;">Master of
+                    Computer Applications (MCA) is a two year professional post-graduate programme for candidates
+                    wanting to delve deeper into the world of computer application development with the help of learning
+                    modern programming language. The programme is a blend of both theoretical and practical knowledge.
+                    An MCA degree endows students an opportunity to work with tools meant to develop better and faster
+                    applications. Master in Computer Application (BCA) is an postgraduate degree course in computer
+                    applications. With the rapid growth of IT industry in India, the demand of computer professional is
+                    increasing day by day. This increasing growth of IT industry has created a lot of opportunities for
+                    the computer graduates.
+                </p>
+            </div>
+        </section>
+        <!-- about MCA department ends -->
+        <br>
+
+        <!-- Top to page button -->
+        <button onclick="topFunction()" id="topBtn" title="Go to top"> GO &#8593 TOP</button>
+        <script>
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+        </script>
+        <!-- Top to page button -->
+        <br>
+
+        <!-- footer start here -->
+        <footer>
+            <div>
+                <p id="all"><strong>&#169opyright reserve</strong></p>
+                <p><strong>&#9830 Department of Computer Application &#9830</strong></p>
+                <p id="iul"><a href="https://iul.ac.in/" target="_blank"><strong>@iul.ac.in</strong></a></p>
+            </div>
+        </footer>
+        <!-- footer ends here -->
+</body>
+</html>
